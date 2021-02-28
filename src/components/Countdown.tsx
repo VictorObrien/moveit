@@ -3,7 +3,14 @@ import { CountdownContext } from '../contexts/CountdownContext';
 import styles from '../styles/components/Countdown.module.css';
 
 export function Countdown(){ 
-  const { minutes, seconds, hasFinished, isActive, resetCountdown, startCountdown } = useContext(CountdownContext)
+  const { 
+    minutes, 
+    seconds, 
+    hasFinished, 
+    isActive, 
+    resetCountdown, 
+    startCountdown 
+  } = useContext(CountdownContext)
 
   const [minuteLeft, minuteRight] = String(minutes).padStart(2, '0').split(''); // padStart é para adicionar o "0" na frente do número quando os minutos forem menor que 10
   const [secondLeft, secondRight] = String(seconds).padStart(2, '0').split(''); // padStart é para adicionar o "0" na frente do número quando os minutos forem menor que 10
